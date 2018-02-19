@@ -4,7 +4,6 @@ Created on Sun Feb 18 01:16:39 2018
 
 @author: jhyun_000
 """
-
 class Glycan:
     '''
     Defines an unrooted glycan as an acyclic undirected graph.
@@ -27,7 +26,7 @@ class Glycan:
     May initialize with zero, one or two arguments:
     zero: empty glycan
     one: iupac string
-    two: names, bonds as lists
+    two: names, bonds as list of dictionaries
     '''
     __init__=__overload__(__init1__,__init2__,__init3__)
 
