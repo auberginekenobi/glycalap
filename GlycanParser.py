@@ -15,10 +15,12 @@ class Glycan:
     names = []
     def __len__(self):
         return len(self.names)
+    def __repr__(self):
+        return self.__str__()
     def __str__(self):
         string=''
         for i in range(len(self.bonds)):
-            string+=str(i)+' '+str(self.names[i])+' '+str(self.bonds[i])+'\n'
+            string+=str(i)+' '+str(self.names[i])+' '+str(self.bonds[i])#+'\n'
         return string
     def __overload__(*functions):
         return lambda *args, **kwargs: functions[len(args)-1](*args, **kwargs)    
