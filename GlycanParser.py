@@ -37,6 +37,12 @@ class Glycan:
     '''
     __init__=__overload__(__init1__,__init2__,__init3__)
 
+    def isBond(self,index_i,index_j):
+        try:
+            return bool(self.bonds[index_i][index_j])
+        except:
+            return False
+
 def parse_iupac(iupac, output=True):
     ''' Parses an IUPAC extended string to construct a glycan graph, 
         represented as two arrays, names and bonds.
