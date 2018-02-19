@@ -17,7 +17,7 @@ class Glycan:
         return len(self.names)
     def __str__(self):
         string=''
-        for i in xrange(len(self.bonds)):
+        for i in range(len(self.bonds)):
             string+=str(i)+' '+str(self.names[i])+' '+str(self.bonds[i])+'\n'
         return string
     def __overload__(*functions):
@@ -85,7 +85,7 @@ def parse_iupac(iupac, output=True):
         
     if output: # print glycan structure
         for i in xrange(len(bonds)):
-            print i, names[i], bonds[i]
+            print (i, names[i], bonds[i])
         
     return names, bonds
 
