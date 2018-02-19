@@ -5,6 +5,32 @@ Created on Sun Feb 18 01:16:39 2018
 @author: jhyun_000
 """
 
+class Glycan:
+    '''
+    Defines an unrooted glycan as an acyclic undirected graph.
+    Implemented as a list of sugar names, and
+    a corresponding list of bonds for each sugar.
+    Unique indices denote each sugar.
+    '''
+    bonds = []
+    names = []
+    def __overload__(*functions):
+        return lambda *args, **kwargs: functions[len(args)-1](*args, **kwargs)    
+    def __init1__(self):
+        pass
+    def __init2__(self, iupac):
+        self.names, self.bonds = parse_iupac(iupac, output=False)
+    def __init3__(self, names, bonds):
+        self.bonds=bonds
+        self.names=names
+    '''
+    May initialize with zero, one or two arguments:
+    zero: empty glycan
+    one: iupac string
+    two: names, bonds as lists
+    '''
+    __init__=__overload__(__init1__,__init2__,__init3__)
+
 def parse_iupac(iupac, output=True):
     ''' Parses an IUPAC extended string to construct a glycan graph, 
         represented as two arrays, names and bonds.
