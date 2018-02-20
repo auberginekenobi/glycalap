@@ -19,7 +19,7 @@ class Glycan:
         return self.__str__()
     def __str__(self):
         string=''
-        for i in range(len(self.bonds)):
+        for i in range(len(self.names)):
             string+=str(i)+' '+str(self.names[i])+' '+str(self.bonds[i])#+'\n'
         return string
     def __overload__(*functions):
