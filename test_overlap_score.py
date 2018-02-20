@@ -20,6 +20,8 @@ def test1():
     '''
     Two small glycans
     '''
+    #https://glytoucan.org/Structures/Glycans/G00055MO
+    #https://glytoucan.org/Structures/Glycans/G00065MO
     lactosamine="beta-D-Galp-(1->4)-beta-D-GlcpNAc(1->"
     a=Glycan(lactosamine)
     VIM="alpha-D-NeupAc-(2->3)-beta-D-Galp-(1->4)-beta-D-GlcpNAc(1->"
