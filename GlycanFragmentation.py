@@ -47,8 +47,11 @@ def GlycanFragmentation(n, glycan, lmbda=2.5):
     else:
       fragment.bonds.remove(fragment.bonds[0]) # remove bond leading to the first node
       newKeys = list(range(1, len(fragment.names)))
-      for key in newKeys:
-        fragment.bonds[key - 1] = {key: list(fragment.bonds[key - 1].values())[0]} # remove positional information
+      fragment.bonds.append({})
+      for key in newKeys: # remove positional information
+        fragment.bonds[key - 1] = {key: list(fragment.bonds[key - 1].values())[0]}
+      for key in newKeys: # add backward edges
+        fragment.bonds[key] = {**fragment.bonds[key], **{key - 1: (fragment.bonds[key - 1][key][0], fragment.bonds[key - 1][key][2], fragment.bonds[key - 1][key][1])}}        
       fragments.append(fragment)
   return fragments
   
