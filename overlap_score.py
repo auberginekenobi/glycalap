@@ -7,6 +7,18 @@ author Owen Chapman auberginekenobi
 from GlycanParser import *
 
 def overlap_score(glycan1, glycan2):
+    '''
+    Finds the largest overlap of the same sugars and bonds between two glycans.
+    Overlap scoring is defined as +1 if the same sugars exist in the same position on the tree;
+        +0 if the same edges are in the same position on their respective trees; and
+        -Inf if edges or nodes are different.
+    Note that because each edge must come with a corresponding node, and the mismatch score is
+        -Inf, the relative weights of node and edge matching don't matter.
+    Inputs: Two Glycan objects
+    Outputs:
+        i: score of longest overlap
+        seeds: all subtrees with an overlap score of i.
+    '''
     i=1
     seeds = []
     for n in range(len(glycan1)):
