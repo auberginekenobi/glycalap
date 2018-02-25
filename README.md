@@ -4,6 +4,7 @@ CSE282 project, assembling glycans.
 zrcjessica - negative binomial distribution for sampling glycan fragments (It's Poisson now)
 
 TODO:
+- function for combining output of overlap_score
 - alpha version of algorithm - agglomerative approach, Owen
 - test cases for agglomerative approach, James
 - progress report, Jessica
