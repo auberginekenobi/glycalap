@@ -7,14 +7,7 @@ author Owen Chapman auberginekenobi
 '''
 
 from GlycanParser import *
-
-def test(testname,expected, observed):
-    try:
-        assert(expected==observed)
-        print('passed test {}'.format(testname))
-    except:
-        print('failed test {}. expected {} got {}'.format(testname,expected,observed))
-    
+from simple_test import test
 
 def test1():
     '''
