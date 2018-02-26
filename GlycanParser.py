@@ -76,7 +76,12 @@ class Glycan:
         for i in range(len(self.names)):
             string+=str(i)+' '+str(self.names[i])+' '+str(self.bonds[i])#+'\n'
         return string
-    def __eq__(self, other):
+    def equals(self, other):
+        '''
+        Checks if this Glycan encodes the same molecule as another
+        Glycan. This is NOT an __eq__ function, which returns true only
+        if they are the same object.
+        '''
         return overlap_score(self,other)[0] == max(len(self),len(other))
     def __overload__(*functions):
         return lambda *args, **kwargs: functions[len(args)-1](*args, **kwargs)    

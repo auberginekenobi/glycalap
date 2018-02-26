@@ -10,7 +10,10 @@ def test(testname,expected, observed):
     Simple testing function. Basically checks if expected == observed.
     '''
     try:
-        assert(expected==observed)
+        if "equals" in dir(expected):
+            assert(expected.equals(observed))
+        else:
+            assert(expected==observed)
         print('passed test {}'.format(testname))
     except:
         print('failed test {}. expected {} got {}'.format(testname,expected,observed))
