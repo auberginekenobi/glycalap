@@ -6,7 +6,7 @@ author Owen Chapman auberginekenobi
 2/19/2018
 '''
 
-from overlap_score import *
+from GlycanParser import *
 
 def test(testname,expected, observed):
     try:

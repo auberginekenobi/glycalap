@@ -8,7 +8,7 @@ author Owen Chapman auberginekenobi
 
 from GlycanParser import *
 from GlycanFragmentation import *
-from overlap_score import *
+from overlap_combine import *
 from agglomerative_assemble import *
 
 
@@ -17,4 +17,12 @@ a=Glycan(VIM)
 b=Glycan(VIM)
 c=Glycan(VIM)
 l = [a,b,c]
-print(agglomerative_assemble(l))
+score, alns = overlap_score(a,b)
+print(score)
+print("%%%%%")
+print(alns[0])
+print(alns[1])
+print('%%%%%')
+print(a)
+overlap_combine(a,b,alns[3])
+print(a==b)

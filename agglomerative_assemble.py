@@ -4,7 +4,6 @@ function agglomerative_assemble
 author Owen Chapman auberginekenobi
 2/25/2018
 '''
-from overlap_score import *
 
 def agglomerative_assemble(glycan_list):
 	'''
