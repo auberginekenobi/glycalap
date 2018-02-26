@@ -6,7 +6,7 @@ zrcjessica - negative binomial distribution for sampling glycan fragments (It's 
 TODO:
 - function for combining output of overlap_score
 - alpha version of algorithm - agglomerative approach, Owen
-- test cases for agglomerative approach, James
+- test cases for agglomerative approach, James (done?)
 - progress report, Jessica
 - DB of examples, either... (open)
 	- scraper
