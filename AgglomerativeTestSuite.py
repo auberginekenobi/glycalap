@@ -60,15 +60,13 @@ def TestThree():
 
 def TestFour():
     '''
-    Linear Glycan (possible branching)
+    Linear Glycan
     '''
-    fragments = [Glycan(['L-Fucp', 'D-GlcpNAc'], [{1: ('alpha', 1, 3)}, {0: ('alpha', 3, 1)}]), 
+    fragments = [Glycan(['L-Fucp', 'D-GlcpNAc'], [{1: ('alpha', 1, 4)}, {0: ('alpha', 4, 1)}]), 
                  Glycan(['D-GlcpNAc', 'D-GlcpNAc'], [{1: ('beta', 1, 4)}, {0: ('beta', 4, 1)}]), 
                  Glycan(['D-GlcpNAc', 'D-GlcpNAc', 'D-GlcpNAc'], [{1: ('beta', 1, 4)}, {0: ('beta', 4, 1), 2: ('beta', 1, 4)}, {1: ('beta', 4, 1)}]), 
-                 Glycan(['D-Manp', 'D-GlcpNAc'], [{1: ('alpha', 1, 3)}, {0: ('alpha', 3, 1)}])]
-    expecteds = [Glycan(['L-Fucp', 'D-GlcpNAc', 'D-GlcpNAc', 'D-GlcpNAc', 'D-Manp'], [{1: ('alpha', 1, 3)}, {0: ('alpha', 3, 1), 2: ('beta', 1, 4)}, {1: ('beta', 4, 1), 3: ('beta', 1, 4)}, {2: ('beta', 4, 1), 4: ('alpha', 3, 1)}, {3: ('alpha', 1, 3)}]), 
-                 Glycan(['L-Fucp', 'D-GlcpNAc', 'D-GlcpNAc', 'D-GlcpNAc', 'D-Manp'], [{1: ('alpha', 1, 3)}, {0: ('alpha', 3, 1), 2: ('beta', 1, 4)}, {1: ('beta', 4, 1), 3: ('beta', 1, 4), 4: ('alpha', 3, 1)}, {2: ('beta', 4, 1)}, {2: ('alpha', 1, 3)}]), 
-                 Glycan(['L-Fucp', 'D-GlcpNAc', 'D-GlcpNAc', 'D-GlcpNAc', 'D-Manp'], [{2: ('alpha', 1, 3)}, {2: ('beta', 1, 4)}, {1: ('beta', 4, 1), 0: ('alpha', 3, 1), 3: ('beta', 1, 4)}, {2: ('beta', 4, 1), 4: ('alpha', 3, 1)}, {3: ('alpha', 1, 3)}])]
+                 Glycan(['D-Manp', 'D-GlcpNAc'], [{1: ('alpha', 4, 1)}, {0: ('alpha', 1, 4)}])]
+    expecteds = [Glycan(['L-Fucp', 'D-GlcpNAc', 'D-GlcpNAc', 'D-GlcpNAc', 'D-Manp'], [{1: ('alpha', 1, 4)}, {0: ('alpha', 4, 1), 2: ('beta', 1, 4)}, {1: ('beta', 4, 1), 3: ('beta', 1, 4)}, {2: ('beta', 4, 1), 4: ('alpha', 1, 4)}, {3: ('alpha', 4, 1)}])]
     Test(4, expecteds, OwensBeautifulAgglomerativeAlgorithm(fragments))
     return
 
