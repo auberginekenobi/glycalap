@@ -33,10 +33,10 @@ def test2():
     '''
     sialyl_lewis_a = "alpha-D-NeupAc-(2->3)-beta-D-Galp-(1->3)[alpha-L-Fucp-(1->4)]-beta-D-GlcpNAc(1->"
     lewis_a = "beta-D-Galp-(1->3)[alpha-L-Fucp-(1->4)]-?-D-GlcpNAc(1->"
-    VIM = "alpha-D-NeupAc-(2->3)-beta-D-Galp-(1->4)-beta-D-GlcpNAc(1->"
+    notVIM = "alpha-D-NeupAc-(2->3)-beta-D-Galp-(1->3)-beta-D-GlcpNAc(1->"
     a=Glycan(sialyl_lewis_a)
     b=Glycan(lewis_a)
-    c=Glycan(VIM)
+    c=Glycan(notVIM)
     s,o=overlap_score(b,c)
     d=overlap_combine(b,c,o[0])
     test(2,a,d)
