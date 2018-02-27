@@ -10,8 +10,24 @@ def Test(name, expecteds, observeds):
     solutions and if an observed solution is viable - pass.
     '''
     failed = 0
+    true = 0
     if len(expecteds) == 0:
         if Glycan.equals(expecteds, observeds):
+            print('Passed test {}, yay!'.format(name))
+            print()
+        else:
+            print('Failed test {}. expected {} got {}, boo!'.format(name, expecteds, observed))
+            print()
+    elif len(expecteds) > 1:
+        for expected in expecteds:
+            for expect in expected:
+                for observed in observeds:
+                    try:
+                        assert(Glycan.equals(expect, observed))
+                        true += 1
+                    except:
+                        pass
+        if true == sum(len(i) for i in expecteds):
             print('Passed test {}, yay!'.format(name))
             print()
         else:
@@ -24,12 +40,12 @@ def Test(name, expecteds, observeds):
                     assert(Glycan.equals(expected, observed))
                 except:
                     failed += 1
-            if failed == len(expecteds):
-                print('Failed test {}. expected {} got {}, boo!'.format(name, expecteds, observed))
-                print()
-            else:
-                print('Passed test {}, yay!'.format(name))
-                print()
+        if failed == len(expecteds):
+            print('Failed test {}. expected {} got {}, boo!'.format(name, expecteds, observed))
+            print()
+        else:
+            print('Passed test {}, yay!'.format(name))
+            print()
         
 def TestOne():
     '''
