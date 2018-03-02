@@ -22,8 +22,17 @@ def overlap_score(glycan1, glycan2):
     seeds = []
     for n in range(len(glycan1)):
             for m in range(len(glycan2)):
-                if glycan1.names[n]==glycan2.names[m]:
-                    seeds.append((Glycan([n],[{}]),Glycan([m],[{}])))
+                if glycan1.names[n]==glycan2.names[m]: # are the sugars the same
+                    # have to check that no bonds conflict
+                    carbon_to_bondinfo1 = {v[1]: v for k, v in glycan1.bonds[n].items()}
+                    carbon_to_bondinfo2 = {v[1]: v for k, v in glycan2.bonds[m].items()}
+                    can_fuse = True
+                    for key in carbon_to_bondinfo1:
+                        if key in carbon_to_bondinfo2:
+                            if carbon_to_bondinfo1[key] != carbon_to_bondinfo2[key]:
+                                can_fuse = False
+                    if can_fuse:
+                        seeds.append((Glycan([n],[{}]),Glycan([m],[{}])))
     if seeds==[]:
         return 0,[]
     for i in range(2,min(len(glycan1)+1,len(glycan2)+1)):
