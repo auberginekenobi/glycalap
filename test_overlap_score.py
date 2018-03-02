@@ -125,6 +125,15 @@ def test10():
     s,o=overlap_score(b,a)
     test(10.1,2,s)
     
+def test11():
+    '''
+    Non-Overlapping Fragments
+    '''
+    a = Glycan(['L-Fucp', 'D-Galp'], [{1: ('alpha', 1, 2)}, {0: ('alpha', 2, 1)}])
+    b = Glycan(['L-Fucp', 'D-GlcpNAc'], [{1: ('alpha', 1, 3)}, {0: ('alpha', 3, 1)}])
+    s,o=overlap_score(a,b)
+    test(11,0,s)
+    
 test1()
 test2()
 test3()
@@ -135,3 +144,4 @@ test7()
 test8()
 test9()
 test10()
+test11()
