@@ -21,7 +21,7 @@ def test1():
     VIM="alpha-D-NeupAc-(2->3)-beta-D-Galp-(1->4)-beta-D-GlcpNAc(1->"
     b=Glycan(VIM)
     s,o=overlap_score(a,b)
-    c = overlap_combine(a,b,o[0])
+    c = overlap_combine(a,b,o.__next__())
     test(1,b,c)
 
 def test2():

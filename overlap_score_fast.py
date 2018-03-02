@@ -18,7 +18,7 @@ def overlap_score(glycan1, glycan2):
     Outputs:
         i: score of longest overlap
         overlap_mappings: list of dicts, that map indices in glycan1:glycan2
-                          that constitute a overlap / shared subtree.
+                          that constitute an overlap / shared subtree.
     '''
     
     bonds1 = glycan1.bonds; bonds2 = glycan2.bonds
