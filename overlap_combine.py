@@ -6,7 +6,7 @@ author Owen Chapman auberginekenobi
 '''
 from GlycanParser import *
 
-
+"""
 def overlap_combine(g1,g2,overlap):
     '''
     Combines two glycans using the output from overlap_score.
@@ -42,3 +42,36 @@ def overlap_combine(g1,g2,overlap):
             else:
                 g1.bonds[g2_g1[j]][g2_g1[key]] = g2.bonds[j][key]
     return g1
+"""
+
+
+def overlap_combine(g1,g2,overlap):
+    '''
+    Combines two glycans using the output from overlap_score.
+    Inputs: 
+        g1, g2 - Glycan objects
+        overlap - dict containing {index of glycan1 -> index of glycan2}
+    Output: 
+        a combined glycan g1+g2
+    '''
+    # map all other indices in g1 to new indices in g2
+    # and add nodes in g1 to g2
+    i=len(g2)
+    for k in range(len(g1)):
+        if k in overlap.keys():
+            continue
+        else:
+            overlap[k] = i
+            i+=1
+            g2.names.append(g1.names[k])
+            g2.bonds.append({})
+    # add g1 edges to g2
+    for j in range(len(g1)):
+        for key in g1.bonds[j].keys():
+            if key == -1:
+                continue
+            elif overlap[key] in g2.bonds[overlap[j]]:
+                assert(g1.bonds[j][key] == g2.bonds[overlap[j]][overlap[key]])
+            else:
+                g2.bonds[overlap[j]][overlap[key]] = g1.bonds[j][key]
+    return g2

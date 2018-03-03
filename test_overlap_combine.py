@@ -38,7 +38,10 @@ def test2():
     b=Glycan(lewis_a)
     c=Glycan(notVIM)
     s,o=overlap_score(b,c)
-    d=overlap_combine(b,c,o[0])
+    d=overlap_combine(b,c,o.__next__())
+    s,o = overlap_score(a,d)
+    print(len(a), len(d), s)
+    
     test(2,a,d)
 
 test1()
