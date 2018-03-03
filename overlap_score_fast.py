@@ -77,6 +77,16 @@ def can_nodes_fuse(v1, v2, glycan1, glycan2):
     ''' Checks immediate neighbors of v1 in glycan1 and v2 in glycan2
         to verify they can fuse. O(1) run time, since maximum degree
         is limited by sugar carbon count. ''' 
+    # Special cases where one or more of the nodes is root, i.e. vi = -1
+    if v1 * v2 < 0: # if comparing root to non-root, fail
+        return False
+    elif v1 == -1 and v2 == -1: # comparing root to root
+        root_sugar1, root_bond1 = get_root_bond(glycan1)
+        root_sugar2, root_bond2 = get_root_bond(glycan2)
+        same_root_bond = root_bond1 == root_bond2 
+        same_root_sugar = glycan1.names[root_sugar1] == glycan2.names[root_sugar2]
+        # check the sugar connected to root is same, and bonded same way
+        return same_root_bond and same_root_sugar
     # Construct reverse mappings of glycan1.bonds and glycan2.bonds
     bond_to_node1 = {}; bond_to_node2 = {}
     for v in glycan1.bonds[v1]:
@@ -90,7 +100,16 @@ def can_nodes_fuse(v1, v2, glycan1, glycan2):
             if same_bond: # same starting carbon occupied
                 v1_adj = bond_to_node1[bond1]
                 v2_adj = bond_to_node2[bond2]
-                if glycan1.names[v1_adj] != glycan2.names[v2_adj]: 
-                    # if conflicting sugar along same bond
+                # name of -1 indexed sugar is always 'root'
+                v1_adj_name = glycan1.names[v1_adj] if v1_adj >= 0 else 'root'
+                v2_adj_name = glycan2.names[v2_adj] if v2_adj >= 0 else 'root'
+                if v1_adj_name != v2_adj_name: # if conflicting sugar along same bond
                     return False
     return True
+    
+def get_root_bond(glycan):
+    ''' Gets the index of the node connected to root and bond info '''
+    for i in xrange(len(glycan)):
+        if -1 in glycan.bonds[i]: # is root
+            return i, glycan.bonds[i][-1]
+    return None
