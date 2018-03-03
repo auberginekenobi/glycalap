@@ -22,6 +22,7 @@ def test1():
     s,o=overlap_score(a,b)
     test(1,2,s)
 
+
 def test2():
     '''
     Small glycans with extra crap
@@ -43,7 +44,25 @@ def test3():
     b=Glycan(VIM)
     s,o=overlap_score(b,b)
     test(3,3,s)
-    
+
+def test3_5(verbose=False):
+    '''
+    Identity test, switching the indices
+    '''
+    lactosamine="beta-D-Galp-(1->4)-beta-D-GlcpNAc(1->"
+    a=Glycan(lactosamine)
+    b=Glycan(lactosamine)
+    b.names.append(b.names.pop(0))
+    b.bonds.append(b.bonds.pop(0))
+    b.bonds[0][1] = b.bonds[0].pop(0)
+    b.bonds[1][0] = b.bonds[1].pop(1)
+    if verbose:
+        print('Same glycan, different ordering:')
+        print(a)
+        print(b)
+    s,o = overlap_score(a,b)
+    test(3.5,2,s)
+
 def test4():
     '''
     Small glycans with extra crap
@@ -146,6 +165,7 @@ def test12():
 test1()
 test2()
 test3()
+test3_5()
 test4()
 test5()
 test6()
