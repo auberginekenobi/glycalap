@@ -102,7 +102,7 @@ def TestFive():
     Test(5, expecteds, agglomerative_assemble(fragments))
     return
 
-TestOne()
+#TestOne()
 TestTwo()
 TestThree()
 TestFour()
