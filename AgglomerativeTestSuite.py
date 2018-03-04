@@ -12,11 +12,13 @@ def Test(name, expecteds, observeds):
     failed = 0
     true = 0
     if len(expecteds) == 0:
-        if Glycan.equals(expecteds, observeds):
+        if expecteds == observeds:
             print('Passed test {}, yay!'.format(name))
             print()
         else:
-            print('Failed test {}. expected {} got {}, boo!'.format(name, expecteds, observed))
+            print('Failed test {}. expected {}'.format(name, expecteds))
+            print()
+            print('got {}, boo!'.format(observed))
             print()
     elif len(expecteds) > 1:
         for expected in expecteds:
@@ -31,7 +33,9 @@ def Test(name, expecteds, observeds):
             print('Passed test {}, yay!'.format(name))
             print()
         else:
-            print('Failed test {}. expected {} got {}, boo!'.format(name, expecteds, observed))
+            print('Failed test {}. expected {}'.format(name, expecteds))
+            print()
+            print('got {}, boo!'.format(observed))
             print()
     else:
         for expected in expecteds:
@@ -41,7 +45,9 @@ def Test(name, expecteds, observeds):
                 except:
                     failed += 1
         if failed == len(expecteds):
-            print('Failed test {}. expected {} got {}, boo!'.format(name, expecteds, observed))
+            print('Failed test {}. expected {}'.format(name, expecteds))
+            print()
+            print('got {}, boo!'.format(observed))
             print()
         else:
             print('Passed test {}, yay!'.format(name))
@@ -102,7 +108,7 @@ def TestFive():
     Test(5, expecteds, agglomerative_assemble(fragments))
     return
 
-#TestOne()
+TestOne()
 TestTwo()
 TestThree()
 TestFour()
