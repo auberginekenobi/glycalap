@@ -30,14 +30,14 @@ def agglomerative_assemble(glycan_list):
     pairwise_overlaps = {} # maps glycan1:glycan2:(score, overlaps)
     for glycan in glycan_list: # initialize all neighbors
         pairwise_overlaps[glycan] = {}
-    for i in xrange(N):
-        for j in xrange(i):
+    for i in range(N):
+        for j in range(i):
             # compute overlaps going one way, then invert for reverse direction
             glycan1 = glycan_list[i]
             glycan2 = glycan_list[j]
             score, overlaps = overlap_score(glycan1, glycan2)
             if score > 0: # actual overlap found, add edge
-                inverted_overlaps = map(__invert_mapping__, overlaps)
+                inverted_overlaps = list(map(__invert_mapping__, overlaps)) # python2/3 compatible
                 pairwise_overlaps[glycan1][glycan2] = (score, overlaps)
                 pairwise_overlaps[glycan2][glycan1] = (score, inverted_overlaps)
                 
@@ -50,7 +50,7 @@ def agglomerative_assemble(glycan_list):
         for glycan1 in pairwise_overlaps:
             for glycan2 in pairwise_overlaps:
                 if glycan2 in pairwise_overlaps[glycan1]: # if overlap > 0 for this pair
-                    score = pairwise_overlaps[glycan1][glycan2]
+                    score, overlaps = pairwise_overlaps[glycan1][glycan2]
                     if score > best_overlap[0]:
                         best_overlap = (score, glycan1, glycan2)
         
@@ -76,14 +76,14 @@ def agglomerative_assemble(glycan_list):
                 if glycan != fused_glycan: # no self edges
                     score, overlaps = overlap_score(glycan, fused_glycan)
                     if score > 0: # actual overlap found, add edge
-                        inverted_overlaps = map(__invert_mapping__, overlaps)
+                        inverted_overlaps = list(map(__invert_mapping__, overlaps)) # python2/3 compatible 
                         pairwise_overlaps[glycan][fused_glycan] = (score, overlaps)
                         pairwise_overlaps[fused_glycan][glycan] = (score, inverted_overlaps)
                     
         else: # no more overlaps exist
             overlaps_exist = False
     
-    return pairwise_overlaps.keys() # return glycans not fused away
+    return list(pairwise_overlaps.keys()) # return glycans not fused away
         
 def __overlap_combine__(glycan1, glycan2, overlap_mapping):
     '''
@@ -102,7 +102,7 @@ def __overlap_combine__(glycan1, glycan2, overlap_mapping):
     # Assign new indices to glycan2 nodes, based on overlap or not
     new_glycan2_indices = {-1:-1} # root always maps to root
     reverse_mapping = __invert_mapping__(overlap_mapping)
-    for g2_index in xrange(len(glycan2)):
+    for g2_index in range(len(glycan2)):
         if g2_index in reverse_mapping: # if overlapped node, inherit glycan1 index
             new_glycan2_indices[g2_index] = reverse_mapping[g2_index]
         else: # if node unique to glycan2, shift index based on unique node so far
@@ -112,7 +112,7 @@ def __overlap_combine__(glycan1, glycan2, overlap_mapping):
             sugar_count += 1
             
     # Add bonds from glycan2 based on new node indices
-    for g2_index in xrange(len(glycan2)):
+    for g2_index in range(len(glycan2)):
         new_index = new_glycan2_indices[g2_index]
         node_bonds = glycan2.bonds[g2_index]        
         for target in node_bonds:

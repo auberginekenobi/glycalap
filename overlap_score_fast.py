@@ -68,7 +68,7 @@ def overlap_score(glycan1, glycan2):
     ''' Return overlap mappings of largest size '''
     if len(overlap_mappings) == 0:
         return 0, []
-    largest_overlap_size = max(map(len, overlap_mappings))
+    largest_overlap_size = max(map(len,overlap_mappings))
     maximum_overlap_mappings = []
     for mapping in overlap_mappings: # get only maximum size mappings
         if len(mapping) == largest_overlap_size:
@@ -111,7 +111,7 @@ def can_nodes_fuse(v1, v2, glycan1, glycan2):
     
 def get_root_bond(glycan):
     ''' Gets the index of the node connected to root and bond info '''
-    for i in xrange(len(glycan)):
+    for i in range(len(glycan)):
         if -1 in glycan.bonds[i]: # is root
             return i, glycan.bonds[i][-1]
     return None
