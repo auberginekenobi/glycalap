@@ -55,7 +55,9 @@ def GlycanFragmentation(n, glycan, lmbda=2.5):
       fragments.append(fragment)
   return fragments
   
+'''
 test = GlycanParser.Glycan('alpha-L-Fucp-(1->2)-beta-D-Galp-(1->4)[alpha-L-Fucp-(1->3)]-beta-D-GlcpNAc-(1->4)-beta-D-Glcp(1->')
 
 for fragment in GlycanFragmentation(10, test):
   print(fragment.names, fragment.bonds)
+'''
