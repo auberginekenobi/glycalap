@@ -98,8 +98,8 @@ def can_nodes_fuse(v1, v2, glycan1, glycan2):
     # Check if immediate neighbors along identical bonds conflict
     for bond1 in bond_to_node1:
         for bond2 in bond_to_node2: 
-            same_bond = bond1[:2] == bond2[:2]
-            if same_bond: # same starting carbon occupied
+            same_carbon = bond1[1] == bond2[1]
+            if same_carbon: # same starting carbon occupied
                 v1_adj = bond_to_node1[bond1]
                 v2_adj = bond_to_node2[bond2]
                 # name of -1 indexed sugar is always 'root'
