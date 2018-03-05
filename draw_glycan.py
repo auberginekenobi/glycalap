@@ -24,7 +24,8 @@ def draw_glycan(glycan):
 
     ''' Map sugar names to node indices and labels '''
     n = len(glycan)
-    node_labels = {-1:'Root'}
+    #node_labels = {-1:'Root'}
+    node_labels = {}
     for i in range(n):
         node_labels[i] = glycan.names[i]
 
