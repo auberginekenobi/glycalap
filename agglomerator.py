@@ -59,10 +59,11 @@ def agglomerative_assemble(glycan_list):
             score, glycan1, glycan2 = best_overlap
             overlap_mapping = pairwise_overlaps[glycan1][glycan2][0] # pick 1st optimal overlap
             fused_glycan = __overlap_combine__(glycan1, glycan2, overlap_mapping)
+            print fused_glycan
             
             ''' Remove all mentions of the two glycans that were fused '''
             pairwise_overlaps.pop(glycan1) # remove entry for glycan1
-            del pairwise_overlaps(glycan2) # remove entry for glycan2
+            pairwise_overlaps.pop(glycan2) # remove entry for glycan2
             for glycan in pairwise_overlaps: # remove mentions of glycan1/2 from other glycans
                 if glycan1 in pairwise_overlaps[glycan]:
                     pairwise_overlaps[glycan].pop(glycan1)
@@ -95,12 +96,12 @@ def __overlap_combine__(glycan1, glycan2, overlap_mapping):
     '''
     
     # Start with copy of first glycan
-    fused_names = glycan1.names.copy()
-    fused_bonds = glycan1.names.copy()
+    fused_names = glycan1.names + []
+    fused_bonds = glycan1.bonds + []
     sugar_count = len(fused_names)
     
     # Assign new indices to glycan2 nodes, based on overlap or not
-    new_glycan2_indices = {}
+    new_glycan2_indices = {-1:-1} # root always maps to root
     reverse_mapping = __invert_mapping__(overlap_mapping)
     for g2_index in xrange(len(glycan2)):
         if g2_index in reverse_mapping: # if overlapped node, inherit glycan1 index
@@ -128,8 +129,4 @@ def __invert_mapping__(mapping):
     inverted = {}
     for k in mapping:
         inverted[ mapping[k] ] = k
-    return mapping
-    
-            
-            
-    
+    return inverted    

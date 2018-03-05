@@ -7,8 +7,9 @@ author Owen Chapman auberginekenobi
 '''
 
 from simple_test import test
-from GlycanParser import *
-from overlap_combine import *
+from GlycanParser import Glycan
+from overlap_score_fast import overlap_score
+from agglomerator import __overlap_combine__ as overlap_combine
 
 def test1():
     '''
@@ -21,7 +22,7 @@ def test1():
     VIM="alpha-D-NeupAc-(2->3)-beta-D-Galp-(1->4)-beta-D-GlcpNAc(1->"
     b=Glycan(VIM)
     s,o=overlap_score(a,b)
-    c = overlap_combine(a,b,o.__next__())
+    c = overlap_combine(a,b,o.pop())
     test(1,b,c)
 
 def test2():
@@ -39,7 +40,7 @@ def test2():
     c=Glycan(notVIM)
     s,o=overlap_score(b,c)
     #print(len(b),len(c),s)
-    d=overlap_combine(b,c,o.__next__())
+    d=overlap_combine(b,c,o.pop())
     #s,o = overlap_score(a,d)
     #print(len(a), len(d), s)
 
