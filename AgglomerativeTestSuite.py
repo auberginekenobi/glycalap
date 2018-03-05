@@ -1,7 +1,7 @@
 # jtsorren
 
 from GlycanParser import *
-from agglomerative_assemble import *
+from agglomerator import agglomerative_assemble
 
 def Test(name, expecteds, observeds):
     '''

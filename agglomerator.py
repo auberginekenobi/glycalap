@@ -57,9 +57,9 @@ def agglomerative_assemble(glycan_list):
         ''' If overlaps still present, pick a best one to fuse '''
         if best_overlap[0] > 0: # if there are overlaps still present
             score, glycan1, glycan2 = best_overlap
-            overlap_mapping = pairwise_overlaps[glycan1][glycan2][0] # pick 1st optimal overlap
+            overlap_mappings = pairwise_overlaps[glycan1][glycan2][1] 
+            overlap_mapping = overlap_mappings[0] # pick 1st optimal overlap, random choice
             fused_glycan = __overlap_combine__(glycan1, glycan2, overlap_mapping)
-            print fused_glycan
             
             ''' Remove all mentions of the two glycans that were fused '''
             pairwise_overlaps.pop(glycan1) # remove entry for glycan1
@@ -94,7 +94,6 @@ def __overlap_combine__(glycan1, glycan2, overlap_mapping):
     Output: 
         fused_glycan = glycan combining glycan1 and glycan2 through the mapping
     '''
-    
     # Start with copy of first glycan
     fused_names = glycan1.names + []
     fused_bonds = glycan1.bonds + []
