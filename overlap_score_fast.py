@@ -69,8 +69,10 @@ def overlap_score(glycan1, glycan2):
     if len(overlap_mappings) == 0:
         return 0, []
     largest_overlap_size = max(map(len, overlap_mappings))
-    maximum_overlap_mappings = filter( # get maximum size mappings
-        lambda x: len(x) == largest_overlap_size, overlap_mappings)
+    maximum_overlap_mappings = []
+    for mapping in overlap_mappings: # get only maximum size mappings
+        if len(overlap_mappings[mapping] == largest_overlap_size):
+            maximum_overlap_mappings.append(mapping)
     return largest_overlap_size, maximum_overlap_mappings
                     
 def can_nodes_fuse(v1, v2, glycan1, glycan2):
