@@ -18,7 +18,7 @@ def Test(name, expecteds, observeds):
         else:
             print('Failed test {}. expected {}'.format(name, expecteds))
             print()
-            print('got {}, boo!'.format(observed))
+            print('got {}, boo!'.format(observeds))
             print()
     elif len(expecteds) > 1:
         for expected in expecteds:
