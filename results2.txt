@@ -1,0 +1,258 @@
+G59121IT	1	False	False	"[
+0 D-Glcp {2: ('beta', 4, 1)}
+1 D-Galp {2: ('beta', 1, 4), 5: ('beta', 3, 1)}
+2 D-GlcpNAc {0: ('beta', 1, 4), 1: ('beta', 4, 1)}
+3 D-Galp {4: ('alpha', 2, 1), 5: ('beta', 1, 4), 7: ('beta', 3, 1)}
+4 L-Fucp {3: ('alpha', 1, 2)}
+5 D-GlcpNAc {1: ('beta', 1, 3), 3: ('beta', 4, 1), 6: ('alpha', 3, 1)}
+6 L-Fucp {5: ('alpha', 1, 3)}
+7 D-GlcpNAc {3: ('beta', 1, 3)}
+]"
+G00506NQ	1	True	True	"[
+0 D-GlcpNAc {1: ('beta', 4, 1), 4: ('beta', 1, 3), 7: ('alpha', 3, 1)}
+1 D-Galp {0: ('beta', 1, 4), 5: ('alpha', 2, 1)}
+2 D-GlcpNAc {3: ('beta', 1, 3), 4: ('beta', 4, 1), 6: ('alpha', 3, 1)}
+3 D-Glcp {2: ('beta', 3, 1)}
+4 D-Galp {0: ('beta', 3, 1), 2: ('beta', 1, 4)}
+5 L-Fucp {1: ('alpha', 1, 2)}
+6 L-Fucp {2: ('alpha', 1, 3)}
+7 L-Fucp {0: ('alpha', 1, 3)}
+]"
+G99594LR	1	True	True	"[
+0 D-GlcpNAc {2: ('beta', 1, 4), 3: ('alpha', 3, 1), 4: ('beta', 4, 1)}
+1 L-Fucp {4: ('alpha', 1, 2)}
+2 D-Glcp {0: ('beta', 4, 1)}
+3 L-Fucp {0: ('alpha', 1, 3)}
+4 D-Galp {0: ('beta', 1, 4), 1: ('alpha', 2, 1)}
+]"
+G14139BU	1	False	False	"[
+0 D-Glcp {2: ('beta', 3, 1)}
+1 D-GlcpNAc {3: ('beta', 1, 3), 5: ('beta', 4, 1)}
+2 D-GlcpNAc {0: ('beta', 1, 3), 3: ('beta', 4, 1), 4: ('alpha', 3, 1)}
+3 D-Galp {1: ('beta', 3, 1), 2: ('beta', 1, 4)}
+4 L-Fucp {2: ('alpha', 1, 3)}
+5 D-Galp {1: ('beta', 1, 4), 6: ('alpha', 2, 1)}
+6 L-Fucp {5: ('alpha', 1, 2)}
+]"
+G82790IO	1	True	True	"[
+0 D-GalpNAc {3: ('beta', 3, 1)}
+1 D-GlcpNAc {2: ('beta', 1, 3), 4: ('beta', 4, 1)}
+2 D-Galp {1: ('beta', 3, 1), 3: ('beta', 1, 4)}
+3 D-GlcpNAc {0: ('beta', 1, 3), 2: ('beta', 4, 1)}
+4 D-Galp6S {1: ('beta', 1, 4)}
+]"
+G54020TT	1	True	True	"[
+0 D-GlcpNAc {1: ('beta', 1, 4), 3: ('beta', 4, 1)}
+1 D-Glcp {0: ('beta', 4, 1)}
+2 D-GlcpNAc {3: ('beta', 1, 3), 4: ('beta', 4, 1), 6: ('alpha', 3, 1)}
+3 D-Galp {0: ('beta', 1, 4), 2: ('beta', 3, 1)}
+4 D-Galp {2: ('beta', 1, 4), 5: ('alpha', 2, 1)}
+5 L-Fucp {4: ('alpha', 1, 2)}
+6 L-Fucp {2: ('alpha', 1, 3)}
+]"
+G91789JU	1	True	True	"[
+0 D-Galp {1: ('beta', 1, 4)}
+1 D-GlcpNAc {0: ('beta', 4, 1), 3: ('beta', 1, 3), 6: ('alpha', 3, 1)}
+2 D-GlcpNAc {3: ('beta', 4, 1), 4: ('beta', 1, 4), 5: ('alpha', 3, 1)}
+3 D-Galp {1: ('beta', 3, 1), 2: ('beta', 1, 4)}
+4 D-Glcp {2: ('beta', 4, 1)}
+5 L-Fucp {2: ('alpha', 1, 3)}
+6 L-Fucp {1: ('alpha', 1, 3)}
+]"
+G19525AM	1	True	True	"[
+0 D-Glcp {1: ('beta', 4, 1)}
+1 D-GlcpNAc {0: ('beta', 1, 4), 2: ('alpha', 3, 1), 3: ('beta', 4, 1)}
+2 L-Fucp {1: ('alpha', 1, 3)}
+3 D-Galp {1: ('beta', 1, 4)}
+]"
+G71503SK	1	False	True	"[
+0 D-GlcpNAc {7: ('beta', 1, 3)}
+1 D-Glcp {3: ('alpha', 3, 1), 4: ('beta', 4, 1)}
+2 L-Fucp {8: ('alpha', 1, 3)}
+3 L-Fucp {1: ('alpha', 1, 3)}
+4 D-GlcpNAc {1: ('beta', 1, 4), 5: ('beta', 4, 1), 6: ('alpha', 3, 1)}
+5 D-Galp {8: ('beta', 3, 1), 4: ('beta', 1, 4)}
+6 L-Fucp {4: ('alpha', 1, 3)}
+7 D-Galp {0: ('beta', 3, 1), 8: ('beta', 1, 4)}
+8 D-GlcpNAc {2: ('alpha', 3, 1), 5: ('beta', 1, 3), 7: ('beta', 4, 1)}
+]"
+G33068BF	1	True	True	"[
+0 D-Galp6S {2: ('beta', 1, 3)}
+1 D-GalpNAc {2: ('beta', 3, 1)}
+2 D-GlcpNAc {0: ('beta', 3, 1), 1: ('beta', 1, 3)}
+]"
+G71503SK	1	True	False	"[
+0 L-Fucp {2: ('alpha', 1, 3)}
+1 D-Glcp {2: ('beta', 4, 1), 4: ('alpha', 3, 1)}
+2 D-GlcpNAc {0: ('alpha', 3, 1), 1: ('beta', 1, 4), 3: ('beta', 4, 1)}
+3 D-Galp {2: ('beta', 1, 4), 5: ('beta', 3, 1)}
+4 L-Fucp {1: ('alpha', 1, 3)}
+5 D-GlcpNAc {3: ('beta', 1, 3), 6: ('alpha', 3, 1)}
+6 L-Fucp {5: ('alpha', 1, 3)}
+]"
+G52486LX	1	True	True	"[
+0 L-Fucp {1: ('alpha', 1, 2)}
+1 D-Galp {0: ('alpha', 2, 1), 2: ('beta', 1, 4)}
+2 D-GlcpNAc {1: ('beta', 4, 1), 3: ('beta', 1, 3), 4: ('alpha', 3, 1)}
+3 D-Glcp {2: ('beta', 3, 1)}
+4 L-Fucp {2: ('alpha', 1, 3)}
+]"
+G36324QX	1	True	False	"[
+0 D-NeupGc {1: ('alpha', 2, 3)}
+1 D-Galp {0: ('alpha', 3, 2), 2: ('beta', 1, 4)}
+2 D-GlcpNAc {1: ('beta', 4, 1), 3: ('beta', 1, 2)}
+3 D-Manp {2: ('beta', 2, 1), 5: ('alpha', 1, 6)}
+4 D-GlcpNAc {5: ('beta', 4, 1), 7: ('beta', 1, 4)}
+5 D-Manp {3: ('alpha', 6, 1), 4: ('beta', 1, 4), 6: ('alpha', 3, 1)}
+6 D-Manp {8: ('beta', 2, 1), 5: ('alpha', 1, 3)}
+7 D-GlcpNAc {4: ('beta', 4, 1)}
+8 D-GlcpNAc {9: ('beta', 4, 1), 6: ('beta', 1, 2)}
+9 D-Galp {8: ('beta', 1, 4)}
+]"
+G33868CI	1	True	True	"[
+0 L-Fucp {1: ('alpha', 1, 3)}
+1 D-GlcpNAc {0: ('alpha', 3, 1), 2: ('beta', 4, 1), 3: ('beta', 1, 3)}
+2 D-Galp {1: ('beta', 1, 4)}
+3 D-Glcp {1: ('beta', 3, 1)}
+]"
+G87743XO	1	True	False	"[
+0 L-Fucp {3: ('alpha', 1, 3)}
+1 D-Galp {4: ('beta', 1, 4)}
+2 D-Glcp {3: ('beta', 3, 1)}
+3 D-GlcpNAc {0: ('alpha', 3, 1), 2: ('beta', 1, 3), 5: ('beta', 4, 1)}
+4 D-GlcpNAc {1: ('beta', 4, 1), 5: ('beta', 1, 3)}
+5 D-Galp {3: ('beta', 1, 4), 4: ('beta', 3, 1)}
+]"
+G94591GB	1	True	True	"[
+0 D-Manp {5: ('alpha', 1, 2)}
+1 D-Manp {2: ('beta', 1, 4), 5: ('alpha', 3, 1)}
+2 D-GlcpNAc {1: ('beta', 4, 1), 3: ('beta', 1, 4)}
+3 D-GlcpNAc {2: ('beta', 4, 1), 4: ('alpha', 6, 1)}
+4 L-Fucp {3: ('alpha', 1, 6)}
+5 D-Manp {0: ('alpha', 2, 1), 1: ('alpha', 1, 3)}
+]"
+G27293OK	1	True	True	"[
+0 D-Manp {1: ('beta', 4, 1), 2: ('alpha', 3, 1), 4: ('beta', 1, 4), 6: ('alpha', 6, 1)}
+1 D-GlcpNAc {0: ('beta', 1, 4)}
+2 D-Manp {0: ('alpha', 1, 3)}
+3 D-Galp {8: ('beta', 1, 4)}
+4 D-GlcpNAc {0: ('beta', 4, 1), 5: ('beta', 1, 4)}
+5 D-GlcpNAc {4: ('beta', 4, 1), 7: ('alpha', 6, 1)}
+6 D-Manp {8: ('beta', 2, 1), 0: ('alpha', 1, 6)}
+7 L-Fucp {5: ('alpha', 1, 6)}
+8 D-GlcpNAc {9: ('alpha', 3, 1), 3: ('beta', 4, 1), 6: ('beta', 1, 2)}
+9 L-Fucp {8: ('alpha', 1, 3)}
+]"
+G50198YU	1	True	True	"[
+0 L-Fucp {6: ('alpha', 1, 2)}
+1 D-Galp3S {4: ('beta', 1, 4)}
+2 D-GlcpNAc {3: ('beta', 1, 3), 6: ('beta', 3, 1)}
+3 D-GalpNAc {2: ('beta', 3, 1), 4: ('beta', 6, 1)}
+4 D-GlcpNAc {1: ('beta', 4, 1), 3: ('beta', 1, 6), 5: ('alpha', 3, 1)}
+5 L-Fucp {4: ('alpha', 1, 3)}
+6 D-Galp {0: ('alpha', 2, 1), 2: ('beta', 1, 3)}
+]"
+G20438JB	1	True	True	"[
+0 D-GlcpNAc {2: ('beta', 1, 3), 4: ('beta', 3, 1)}
+1 D-GlcpNAc6S {2: ('beta', 1, 6), 5: ('beta', 4, 1)}
+2 D-GalpNAc {0: ('beta', 3, 1), 1: ('beta', 6, 1)}
+3 L-Fucp {4: ('alpha', 1, 2)}
+4 D-Galp {0: ('beta', 1, 3), 3: ('alpha', 2, 1)}
+5 D-Galp {1: ('beta', 1, 4)}
+]"
+G23262BU	1	True	True	"[
+0 D-GlcpNAc6S {1: ('beta', 1, 6), 4: ('beta', 4, 1)}
+1 D-GalpNAc {0: ('beta', 6, 1), 3: ('beta', 3, 1)}
+2 L-Fucp {4: ('alpha', 1, 2)}
+3 D-Galp {1: ('beta', 1, 3)}
+4 D-Galp {0: ('beta', 1, 4), 2: ('alpha', 2, 1)}
+]"
+G67561OD	1	True	True	"[
+0 D-Galp {3: ('beta', 1, 4)}
+1 D-GalpNAc {3: ('beta', 6, 1), 4: ('beta', 3, 1)}
+2 D-NeupGc {4: ('alpha', 2, 3)}
+3 D-GlcpNAc {0: ('beta', 4, 1), 1: ('beta', 1, 6)}
+4 D-Galp {1: ('beta', 1, 3), 2: ('alpha', 3, 2)}
+]"
+G03670RH	1	True	True	"[
+0 D-Galp {1: ('beta', 1, 3)}
+1 D-GalpNAc {0: ('beta', 3, 1), 5: ('beta', 6, 1)}
+2 D-NeupGc {3: ('alpha', 2, 3)}
+3 D-Galp {2: ('alpha', 3, 2), 4: ('beta', 4, 1), 5: ('beta', 1, 4)}
+4 D-GalpNAc {3: ('beta', 1, 4)}
+5 D-GlcpNAc {1: ('beta', 1, 6), 3: ('beta', 4, 1)}
+]"
+G81527RS	1	True	True	"[
+0 D-Galp {1: ('beta', 3, 1), 5: ('beta', 1, 3)}
+1 D-GlcpNAc {0: ('beta', 1, 3), 2: ('beta', 3, 1), 3: ('alpha', 6, 2)}
+2 D-Galp {1: ('beta', 1, 3), 4: ('alpha', 2, 1)}
+3 D-NeupAc {1: ('alpha', 2, 6)}
+4 L-Fucp {2: ('alpha', 1, 2)}
+5 D-Glcp {0: ('beta', 3, 1)}
+]"
+G16679DU	1	False	False	"[
+0 D-Galp {9: ('beta', 1, 3)}
+1 L-Fucp {4: ('alpha', 1, 6)}
+2 D-GlcpNAc {3: ('beta', 1, 4)}
+3 D-Manp {8: ('beta', 6, 1), 9: ('beta', 2, 1), 2: ('beta', 4, 1), 6: ('alpha', 1, 6)}
+4 D-GlcpNAc {1: ('alpha', 6, 1), 5: ('beta', 4, 1)}
+5 D-GlcpNAc {4: ('beta', 1, 4), 6: ('beta', 4, 1)}
+6 D-Manp {3: ('alpha', 6, 1), 5: ('beta', 1, 4), 7: ('alpha', 3, 1)}
+7 D-Manp {13: ('beta', 2, 1), 6: ('alpha', 1, 3)}
+8 D-GlcpNAc {3: ('beta', 1, 6)}
+9 D-GlcpNAc {0: ('beta', 3, 1), 3: ('beta', 1, 2), 10: ('beta', 4, 1), 11: ('beta', 1, 6), 12: ('beta', 1, 4)}
+10 D-Galp {9: ('beta', 1, 4)}
+11 D-Manp {9: ('beta', 6, 1)}
+12 D-Manp {9: ('beta', 4, 1)}
+13 D-GlcpNAc {7: ('beta', 1, 2)}
+]"
+G33734YD	1	True	True	"[
+0 L-Fucp {3: ('alpha', 1, 6)}
+1 D-GlcpNAc {2: ('beta', 1, 4), 5: ('beta', 4, 1)}
+2 D-Manp {1: ('beta', 4, 1), 6: ('alpha', 1, 3)}
+3 D-GlcpNAc {0: ('alpha', 6, 1), 4: ('beta', 4, 1)}
+4 D-GlcpNAc {3: ('beta', 1, 4), 6: ('beta', 4, 1)}
+5 D-Galp {1: ('beta', 1, 4)}
+6 D-Manp {2: ('alpha', 3, 1), 4: ('beta', 1, 4), 7: ('alpha', 6, 1)}
+7 D-Manp {6: ('alpha', 1, 6)}
+]"
+G22063DR	1	False	False	"[
+0 D-Galp {6: ('beta', 1, 4)}
+1 L-Fucp {6: ('alpha', 1, 3)}
+2 D-GlcpNAc {3: ('beta', 4, 1), 5: ('beta', 1, 2)}
+3 D-Manp {2: ('beta', 1, 4)}
+4 D-Manp {5: ('alpha', 6, 1), 7: ('alpha', 3, 1)}
+5 D-Manp {2: ('beta', 2, 1), 4: ('alpha', 1, 6)}
+6 D-GlcpNAc {0: ('beta', 4, 1), 1: ('alpha', 3, 1), 7: ('beta', 1, 2)}
+7 D-Manp {4: ('alpha', 1, 3), 6: ('beta', 2, 1)}
+]"
+G04764ON	1	True	True	"[
+0 D-Galp {11: ('beta', 1, 4), 5: ('alpha', 3, 2)}
+1 D-Manp {11: ('beta', 2, 1), 6: ('alpha', 1, 6)}
+2 D-NeupGc {3: ('alpha', 2, 6)}
+3 D-Galp {2: ('alpha', 6, 2), 4: ('beta', 1, 4)}
+4 D-GlcpNAc {3: ('beta', 4, 1), 7: ('beta', 1, 2)}
+5 D-NeupGc {0: ('alpha', 2, 3)}
+6 D-Manp {8: ('beta', 1, 4), 1: ('alpha', 6, 1), 7: ('alpha', 3, 1)}
+7 D-Manp {4: ('beta', 2, 1), 6: ('alpha', 1, 3)}
+8 D-GlcpNAc {9: ('beta', 1, 4), 6: ('beta', 4, 1)}
+9 D-GlcpNAc {8: ('beta', 4, 1), 10: ('alpha', 6, 1)}
+10 L-Fucp {9: ('alpha', 1, 6)}
+11 D-GlcpNAc {0: ('beta', 4, 1), 1: ('beta', 1, 2)}
+]"
+G65832JS	1	True	True	"[
+0 D-GlcpNAc {10: ('beta', 1, 2), 13: ('beta', 4, 1)}
+1 L-Fucp {7: ('alpha', 1, 6)}
+2 D-GlcpNAc {3: ('beta', 1, 6), 12: ('beta', 4, 1)}
+3 D-Manp {9: ('alpha', 1, 6), 2: ('beta', 6, 1), 4: ('beta', 2, 1)}
+4 D-GlcpNAc {3: ('beta', 1, 2), 5: ('beta', 4, 1)}
+5 D-Galp {4: ('beta', 1, 4), 6: ('beta', 3, 1)}
+6 D-GlcpNAc {11: ('beta', 4, 1), 5: ('beta', 1, 3)}
+7 D-GlcpNAc {8: ('beta', 4, 1), 1: ('alpha', 6, 1)}
+8 D-GlcpNAc {9: ('beta', 4, 1), 7: ('beta', 1, 4)}
+9 D-Manp {8: ('beta', 1, 4), 10: ('alpha', 3, 1), 3: ('alpha', 6, 1)}
+10 D-Manp {0: ('beta', 2, 1), 9: ('alpha', 1, 3)}
+11 D-Galp {6: ('beta', 1, 4)}
+12 D-Galp {2: ('beta', 1, 4)}
+13 D-Galp {0: ('beta', 1, 4)}
+]"
