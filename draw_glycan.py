@@ -5,9 +5,12 @@ Created on Sun Mar 04 20:43:44 2018
 @author: jhyun_000
 """
 
-from GlycanParser import Glycan
 import networkx as nx
 import matplotlib.pyplot as plt
+
+# Used to get graphviz:
+# https://stackoverflow.com/questions/40528048/pip-install-pygraphviz-no-package-libcgraph-found
+from networkx.drawing.nx_agraph import graphviz_layout
 
 def draw_glycan(glycan):
     ''' Uses networkx to draw a glycan as a graph, showing node labels,
@@ -24,7 +27,6 @@ def draw_glycan(glycan):
 
     ''' Map sugar names to node indices and labels '''
     n = len(glycan)
-    #node_labels = {-1:'Root'}
     node_labels = {}
     for i in range(n):
         node_labels[i] = glycan.names[i]
@@ -60,7 +62,8 @@ def draw_glycan(glycan):
             node_colors.append('lightgrey')
             
     ''' Render graph as matplotlib figure'''
-    pos=nx.spring_layout(G)
+#    pos = nx.spring_layout(G) # old layout
+    pos = graphviz_layout(G, prog='dot') # new tree-based layout
     nx.draw_networkx_nodes(G, pos, with_labels=True, node_color=node_colors, node_size=1200)
     nx.draw_networkx_edges(G, pos, edgelist=drawable_edges)
     nx.draw_networkx_labels(G, pos, labels=node_labels)
